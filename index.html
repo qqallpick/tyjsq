@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中考体育计算器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>中考体育计算器v0.1.4</h1>
+    <form id="heightWeightForm">
+      <label for="gender">性别:</label>
+      <select id="gender" name="gender" required>
+        <option value="">请选择</option>
+        <option value="male">男</option>
+        <option value="female">女</option>
+      </select>
+      <label for="age">年龄:</label>
+      <input type="number" id="age" name="age" required><br>
+      <label for="height">身高 (cm):</label>
+      <input type="number" id="height" name="height" required><br>
+      <label for="weight">体重 (kg):</label>
+      <input type="number" id="weight" name="weight" required><br>
+      <div class="flex-container">
+        <button type="submit">计算</button>
+        <div id="result"></div>
+      </div>
+    </form>
+
+    <form id="tinengForm">
+      <div class="flex-container">
+        <label for="score">总分</label>
+        <div id="scoreresult">0</div>
+        <label for="rating">评级</label>
+        <div id="ratingresult">待定</div>
+      </div>
+      <label id ='yintilabel' for="yinti">引体向上 (个):</label>
+      <div class="flex-container">
+        <input type="number" id="yinti" name="yinti" required><br>
+        <div id="yintiresult">0</div>
+      </div>
+      <label for="yangwo">仰卧起坐 (个):</label>
+      <div class="flex-container">
+        <input type="number" id="yangwo" name="yangwo" required><br>
+        <div id="yangworesult">0</div>
+      </div>
+      <label for="shexing">蛇形跑 (秒):</label>
+      <div class="flex-container">
+        <input type="number" id="shexing" name="shexing" required><br>
+        <div id="shexingresult">0</div>
+      </div>
+      <label for="sanqian">三公里 (分,秒):</label>
+      <div class="flex-container">
+        <input type="number" id="weightMinutes" name="weightMinutes" required>
+        <label for="weightMinutes">分</label>
+        <input type="number" id="weightSeconds" name="weightSeconds" required>
+        <label for="weightSeconds">秒</label>
+        <div id="sanqianresult">0</div>
+      </div>
+      <button type="submit">计算</button>
+    </form>
+  </div>
+  <script  src="script.js"></script>
+</body>
+
+</html>
