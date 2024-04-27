@@ -6,11 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>中考体育计算器</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function updateCount() {
+      fetch('counter.php')
+        .then(response => response.text())
+        .then(count => {
+          document.getElementById('count').textContent = count;
+        });
+    }  
+  </script>
 </head>
 
-<body>
+<body onload="updateCount()">
   <div class="container">
-    <h1>中考体育计算器v0.1.4</h1>
+    <h1>中考体育计算器v0.15</h1>
     <form id="heightWeightForm">
       <label for="gender">性别:</label>
       <select id="gender" name="gender" required>
@@ -37,7 +46,7 @@
         <label for="rating">评级</label>
         <div id="ratingresult">待定</div>
       </div>
-      <label id ='yintilabel' for="yinti">引体向上 (个):</label>
+      <label id='yintilabel' for="yinti">引体向上 (个):</label>
       <div class="flex-container">
         <input type="number" id="yinti" name="yinti" required><br>
         <div id="yintiresult">0</div>
@@ -62,8 +71,9 @@
       </div>
       <button type="submit">计算</button>
     </form>
+    <div id="countdiv">页面访问次数: <span id="count">0</span></div>
   </div>
-  <script  src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
