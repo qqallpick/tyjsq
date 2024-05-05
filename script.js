@@ -249,6 +249,7 @@ function checkYinti(age, gender, yinti) {
     }
     else if (gender == 'female') {
         // 待完善
+        return 0
     } else return 0
 }
 
@@ -317,12 +318,76 @@ function checkYangwo(age, gender, yangwo) {
         }
     } else if (gender == 'female') {
         return 0
-    }
-    return 0
+    }else return 0
 }
 
 function checkShexing(age, gender, shexing) {
-    return 0
+    // 直接用秒的单位来对比
+    if (gender == 'male') {
+        if (16 <= age && age <= 24) {
+            if (46 <= shexing && shexing < 50) return 55
+            else if (50 <= shexing && shexing < 54) return 60
+            else if (54 <= shexing && shexing < 58) return 65
+            else if (58 <= shexing && shexing < 62) return 70
+            else if (62 <= shexing && shexing < 67) return 75
+            else if (67 <= shexing && shexing < 72) return 80
+            else if (72 <= shexing && shexing < 77) return 85
+            else if (77 <= shexing && shexing < 82) return 90
+            else if (82 <= shexing && shexing < 87) return 95
+            else if (87 <= shexing) return parseInt(100 + (shexing - 87) / 2)
+            else return 0
+        } else if (25 <= age && age <= 27) {
+            if (43 <= yangwo && yangwo < 47) return 55
+            else if (47 <= yangwo && yangwo < 51) return 60
+            else if (51 <= yangwo && yangwo < 55) return 65
+            else if (55 <= yangwo && yangwo < 59) return 70
+            else if (59 <= yangwo && yangwo < 63) return 75
+            else if (63 <= yangwo && yangwo < 67) return 80
+            else if (67 <= yangwo && yangwo < 72) return 85
+            else if (72 <= yangwo && yangwo < 77) return 90
+            else if (77 <= yangwo && yangwo < 82) return 95
+            else if (82 <= yangwo) return parseInt(100 + (yangwo - 82) / 2)
+            else return 0
+        } else if (28 <= age && age <= 30) {
+            if (41 <= yangwo && yangwo < 45) return 55
+            else if (45 <= yangwo && yangwo < 49) return 60
+            else if (49 <= yangwo && yangwo < 53) return 65
+            else if (53 <= yangwo && yangwo < 57) return 70
+            else if (57 <= yangwo && yangwo < 61) return 75
+            else if (61 <= yangwo && yangwo < 65) return 80
+            else if (65 <= yangwo && yangwo < 70) return 85
+            else if (70 <= yangwo && yangwo < 75) return 90
+            else if (75 <= yangwo && yangwo < 80) return 95
+            else if (80 <= yangwo) return parseInt(100 + (yangwo - 80) / 2)
+            else return 0
+        } else if (31 <= age && age <= 33) {
+            if (39 <= yangwo && yangwo < 43) return 55
+            else if (43 <= yangwo && yangwo < 47) return 60
+            else if (47 <= yangwo && yangwo < 51) return 65
+            else if (51 <= yangwo && yangwo < 55) return 70
+            else if (55 <= yangwo && yangwo < 59) return 75
+            else if (59 <= yangwo && yangwo < 63) return 80
+            else if (63 <= yangwo && yangwo < 68) return 85
+            else if (68 <= yangwo && yangwo < 73) return 90
+            else if (73 <= yangwo && yangwo < 78) return 95
+            else if (78 <= yangwo) return parseInt(100 + (yangwo - 78) / 2)
+            else return 0
+        } else if (34 <= age && age <= 36) {
+            if (35 <= yangwo && yangwo < 39) return 55
+            else if (39 <= yangwo && yangwo < 43) return 60
+            else if (43 <= yangwo && yangwo < 47) return 65
+            else if (47 <= yangwo && yangwo < 51) return 70
+            else if (51 <= yangwo && yangwo < 55) return 75
+            else if (55 <= yangwo && yangwo < 60) return 80
+            else if (60 <= yangwo && yangwo < 65) return 85
+            else if (65 <= yangwo && yangwo < 70) return 90
+            else if (70 <= yangwo && yangwo < 75) return 95
+            else if (75 <= yangwo) return parseInt(100 + (yangwo - 75) / 2)
+            else return 0
+        }
+    } else if (gender == 'female') {
+        return 0
+    }else return 0
 }
 
 function checkSanqian(age, gender, sanqianfen, sanqianmiao) {
